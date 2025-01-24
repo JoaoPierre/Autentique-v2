@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "v2/version"
+require_relative 'v2/version'
 
 module Autentique
   module V2
