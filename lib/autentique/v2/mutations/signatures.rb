@@ -2,7 +2,7 @@
 
 module Autentique
   module V2
-    module Multations
+    module Mutations
       # This module contains mutations for managing signatures in Autentique V2.
       module Signatures
         # Mutation to create a sign link
