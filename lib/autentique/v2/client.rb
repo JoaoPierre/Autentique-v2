@@ -13,7 +13,10 @@ module Autentique
     #   documents = client.list_documents
     class Client
       include HTTParty
-      # include Mutations::Documents
+      include Mutations::Documents
+      include Mutations::Signatures
+      include Mutations::Folders
+      include Mutations::BiometricVerifications
 
       base_uri 'https://api.autentique.com.br/v2/graphql'
       format :json
