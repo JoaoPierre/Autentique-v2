@@ -4,6 +4,10 @@
 
 require 'httparty'
 require 'json'
+require_relative 'mutations/documents'
+require_relative 'mutations/signatures'
+require_relative 'mutations/folders'
+require_relative 'mutations/biometric_verifications'
 
 module Autentique
   module V2
@@ -13,10 +17,10 @@ module Autentique
     #   documents = client.list_documents
     class Client
       include HTTParty
-      include Mutations::Documents
-      include Mutations::Signatures
-      include Mutations::Folders
-      include Mutations::BiometricVerifications
+      include V2::Mutations::Documents
+      include V2::Mutations::Signatures
+      include V2::Mutations::Folders
+      include V2::Mutations::BiometricVerifications
 
       base_uri 'https://api.autentique.com.br/v2/graphql'
       format :json
